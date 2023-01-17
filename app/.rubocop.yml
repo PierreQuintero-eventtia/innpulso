@@ -1,0 +1,17 @@
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Exclude:
+  - "config/**/*"
+  - "bin/*"
+  - "Gemfile"
+  - "node_modules/**/*"
+  - "tmp/**/*"
+  - "vendor/**/*"
+  - ".git/**/*"
+
+Layout/LineLength:
+  Max: 100

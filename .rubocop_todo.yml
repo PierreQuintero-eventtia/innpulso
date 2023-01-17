@@ -1,0 +1,37 @@
+
+# Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods.
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+# Configuration parameters: CountComments, CountAsOne, ExcludedMethods, AllowedMethods, AllowedPatterns, IgnoredMethods.
+Metrics/MethodLength:
+  Max: 12
+
+# Configuration parameters: AllowedMethods, AllowedPatterns, IgnoredMethods.
+Metrics/PerceivedComplexity:
+  Max: 9
+
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'config/application.rb'
+    - 'db/migrate/20230114163614_devise_create_users.rb'
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'config/initializers/*'
+    - 'bin/*'
+    - 'Gemfile'
+    - 'db/**/*'
+
+# This cop supports safe autocorrection (--autocorrect).
+Style/IfUnlessModifier:
+  Exclude:
+    - 'bin/bundle'
+
+# URISchemes: http, https
+Layout/LineLength:
+  Max: 100

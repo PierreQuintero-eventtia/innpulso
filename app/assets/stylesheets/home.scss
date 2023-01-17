@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+
+*{
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: $black;
+  background-image: url("./overlay.png"),linear-gradient(45deg, $violet 25%, #8C174C 85%);
+  background-size: 256px,cover;
+  background-position: center,center;
+  background-repeat: repeat,no-repeat;
+  color: $gray;
+  font-family: $dm_sans;
+  letter-spacing: 0px;
+  height: 100vh;
+}
+
+.bg-dark{
+  backdrop-filter: blur(25px)!important;
+  background-color: rgba(0,0,0,.6)!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar{
+  padding: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: $crimson;
+}
+
+.btn{
+  @include btn;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+a{
+  color: $white;
+  text-transform: none;
+  &:hover{
+    color: $gray;
+  }
+}
+
+.logo{
+  font-family: $outfit;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: -1px;
+}

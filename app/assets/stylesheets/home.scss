@@ -9,7 +9,18 @@
   box-sizing: border-box;
 }
 
-html, body{
+html {
+    margin: 0px;
+    width: 100%;
+ }
+ 
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
+
+body{
   background-color: $black;
   background-image: url("./overlay.png"),linear-gradient(45deg, $violet 25%, #8C174C 85%);
   background-size: 256px,cover;
@@ -20,6 +31,10 @@ html, body{
   letter-spacing: 0px;
 }
 
+.index-container{
+    margin: 170px auto;
+    
+  }
 .bg-dark{
   backdrop-filter: blur(25px)!important;
   background-color: rgba(0,0,0,.6)!important;

@@ -1,0 +1,135 @@
+@import "mixins";
+
+.inner{ 
+  width: calc(100% - 8em);
+  max-width: 64em;
+  margin: 70px auto;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro{
+  margin: 150px auto;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-title{
+  @include title-h1;
+}
+
+.intro-subtitle{
+  margin-bottom: 10px;
+  color: $gray;
+  letter-spacing: 0.025em;
+}
+
+.intro-button{
+  margin-top: 20px;
+  width: 50%;
+  background-color: $violet;
+  color: $white;
+  &:hover{
+    background-color: $white;
+    color: $violet;
+  }
+}
+
+.intro-button-login{
+  margin-top: 20px;
+  width: 50%;
+  background-color: transparent;
+  color: $white;
+  border: 1px $gray solid;
+  &:hover{
+    background-color: $gray;
+    color: $violet;
+  }
+
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 9.5em;
+    background: rgba(255,255,255,.25);
+  }
+}
+
+
+.about{
+  background-color: $dark_gray;
+  border-radius: 0.7em;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.about-description{
+  padding: 7em 4em 7em 4em;
+}
+
+.about-title{
+  padding: 10px 100px 20px 100px;
+  @include title-h1;
+}
+
+.about-text{
+padding: 0 100px;
+}
+
+.carousel{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-item {
+  transition-duration: 5s;
+}
+
+.features{
+  background-color: $dark_gray;
+  border-radius: 0.7em;
+  text-align: center;
+  width: 100%;
+  div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.features-boxes{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.box-title{
+  font-family: $ubuntu;
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin: 0 0 .5em 0;
+}
+
+.box-description{
+  padding: 30px;
+}

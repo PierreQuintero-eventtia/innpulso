@@ -6,3 +6,12 @@
     color: $violet;
   }
  }
+
+ @mixin title-h1{
+  color: $white;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: .55em;
+  letter-spacing: -0.035em;
+  font-family: $ubuntu;
+ }

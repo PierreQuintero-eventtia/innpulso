@@ -3,7 +3,14 @@ class TemplatesController < ApplicationController
 
   # GET /templates or /templates.json
   def index
-    @templates = Template.all
+    respond_to do |format|
+      format.html {}
+    end
+    @categories = Category.order(name: :asc).load_async
+    @templates = Template.all.load_async
+    if params && params[:category_id]
+      @templates = @templates.where(category_id: params[:category_id])
+    end
   end
 
   # GET /templates/1 or /templates/1.json

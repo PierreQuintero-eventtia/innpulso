@@ -35,5 +35,8 @@ module Innpulso
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Allow load async
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end

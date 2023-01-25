@@ -3,9 +3,6 @@ class TemplatesController < ApplicationController
 
   # GET /templates or /templates.json
   def index
-    respond_to do |format|
-      format.html {}
-    end
     @categories = Category.order(name: :asc).load_async
     @templates = Template.all.load_async
     if params && params[:category_id]
